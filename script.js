@@ -157,3 +157,19 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+
+// Select all navbar links
+const navLinks = document.querySelectorAll('.navbar-link');
+
+// Add a click event listener to each button
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        // Remove active class from all links
+        navLinks.forEach(btn => btn.classList.remove('active'));
+        // Add active class to the clicked link
+        this.classList.add('active');
+    });
+});
